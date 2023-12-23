@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 df = pd.read_csv('sentimentdataset.csv')
 
 # Display the first few rows of the dataframe
+print("First 5 rows of the dataset:")
 print(df.head())
 
 # Assuming 'class_column' is the column containing class labels
@@ -21,3 +22,11 @@ plt.title('sentiment dataset Distribution')
 plt.xlabel('Target')
 plt.ylabel('Frequency')
 plt.show()
+
+
+#preprocessing
+df=df.dropna()
+df=df.drop(['ID','Source'],axis=1)
+print(df)
+
+
